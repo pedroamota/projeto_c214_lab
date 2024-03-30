@@ -1,8 +1,8 @@
-Projeto Prático C214
+# Projeto Prático C214
 
-Funcionalidades
-Interface Interativa
-Dicas de saúde
-Interpretação de resultado
-Calcular IMC
-Cálculo peso ideal (saúde)
+### Funcionalidades Planejadas<br>
+Interface Interativa <br>
+Dicas de saúde <br>
+Interpretação de resultado <br>
+Calcular IMC <br>
+Cálculo peso ideal (saúde) <br>
