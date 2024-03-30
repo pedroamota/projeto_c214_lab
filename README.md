@@ -1,4 +1,4 @@
-# Projeto Prático C214 :iphone:
+# Projeto Prático C214 :weight_lifting: 
 
 ### Funcionalidades Planejadas<br>
 * Interface Interativa
