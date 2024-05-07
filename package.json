@@ -1,0 +1,15 @@
+{
+  "name": "projeto-c214",
+  "version": "1.0.0",
+  "description": "Projeto Calculadora IMC ",
+  "main": "CalculadoraIMC.py",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedroamota/projeto_c214_lab.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
