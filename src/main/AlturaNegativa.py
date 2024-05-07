@@ -1,0 +1,2 @@
+class AlturaNegativa(Exception):
+    pass
