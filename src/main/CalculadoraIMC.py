@@ -1,4 +1,4 @@
-class PesoNegativoError(Exception):
+class PesoNegativo(Exception):
     pass
 
 class IMCService:
@@ -10,10 +10,10 @@ class CalculadoraIMC:
 
     def calcular_imc(self, altura: float, peso: float) -> float:
         if peso < 0:
-            raise PesoNegativoError("Peso negativo")
+            raise PesoNegativo("Peso negativo")
 
         if altura < 0:
-            raise ValueError("Altura negativa")
+            raise AlturaNegativa("Altura negativa")
 
         imc = peso / altura ** 2
 
