@@ -1,3 +1,6 @@
+class AlturaNegativa(Exception):
+    pass
+
 class PesoNegativo(Exception):
     pass
 
