@@ -1,0 +1,2 @@
+class PesoNegativoError(Exception):
+    pass
