@@ -7,7 +7,7 @@ class PesoNegativo(Exception):
 class IMCService:
     pass
 
-class CalculadoraIMC:
+class Calculadora_IMC:
     def __init__(self, imc_service: IMCService):
         self.imc_service = imc_service
 
