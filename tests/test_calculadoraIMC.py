@@ -2,6 +2,7 @@ import pytest
 
 from src.main.CalculadoraIMC import AlturaNegativa, Calculadora_IMC, IMCService, PesoNegativo
 
+
 def test_calcularIMC():
     imc_service = IMCService()
     calculadora = Calculadora_IMC(imc_service)
