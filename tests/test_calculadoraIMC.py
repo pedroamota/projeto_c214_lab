@@ -1,9 +1,9 @@
 import pytest
-from .src.CalculadoraIMC import CalculadoraIMC, AlturaNegativa, PesoNegativo, IMCService
+from src.CalculadoraIMC import Calculadora_IMC, AlturaNegativa, PesoNegativo, IMCService
 
 def test_calcularIMC():
     imc_service = IMCService()
-    calculadora = CalculadoraIMC(imc_service)
+    calculadora = Calculadora_IMC(imc_service)
 
     altura = 1.75
     peso = 70
@@ -13,14 +13,14 @@ def test_calcularIMC():
 
 def test_pesoNegativo():
     imc_service = IMCService()
-    calculadora = CalculadoraIMC(imc_service)
+    calculadora = Calculadora_IMC(imc_service)
     
     with pytest.raises(PesoNegativo):
         calculadora.calcular_imc(1.75, -70)
 
 def test_alturaNegativa():
     imc_service = IMCService()
-    calculadora = CalculadoraIMC(imc_service)
+    calculadora = Calculadora_IMC(imc_service)
     
     with pytest.raises(AlturaNegativa):
         calculadora.calcular_imc(-1.75, 70)
