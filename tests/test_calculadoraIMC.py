@@ -1,5 +1,5 @@
 import pytest
-from src.CalculadoraIMC import CalculadoraIMC, AlturaNegativa, PesoNegativo, IMCService
+from .src.CalculadoraIMC import CalculadoraIMC, AlturaNegativa, PesoNegativo, IMCService
 
 def test_calcularIMC():
     imc_service = IMCService()
