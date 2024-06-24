@@ -37,6 +37,7 @@ e integrar sistemas de forma mais eficaz.
    Isso cria um ambiente virtual na pasta venv.
 
 3. **Ativar o ambiente virtual:**
+
    No Windows:
    ```bash
    venv\Scripts\activate
@@ -71,24 +72,24 @@ e integrar sistemas de forma mais eficaz.
 <style>
     .container {
         display: flex;
-        flex-direction: column; /* Mostra os itens em coluna */
-        align-items: center; /* Centraliza os itens horizontalmente */
-        list-style-type: none; /* Remove os marcadores padrão da lista */
+        flex-direction: column; 
+        align-items: center; 
+        list-style-type: none; 
         padding: 0;
     }
     .item {
-        width: 200px; /* Largura dos itens */
+        width: 200px;
         text-align: center;
         border: 1px solid #ccc;
         padding: 10px;
         margin: 5px;
     }
     .item a {
-        color: #333; /* Cor do texto do link */
-        text-decoration: none; /* Remove sublinhado do link */
+        color: #333; 
+        text-decoration: none; 
     }
     .item a:hover {
-        text-decoration: underline; /* Sublinhado ao passar o mouse */
+        text-decoration: underline; 
     }
 </style>
 
