@@ -69,41 +69,18 @@ e integrar sistemas de forma mais eficaz.
 
 ## ✨ Equipe
 
-<style>
-    .container {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        list-style-type: none; 
-        padding: 0;
-    }
-    .item {
-        width: 200px;
-        text-align: center;
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin: 5px;
-    }
-    .item a {
-        color: #333; 
-        text-decoration: none; 
-    }
-    .item a:hover {
-        text-decoration: underline; 
-    }
-</style>
 
-<div class="container">
-    <div class="item"><a href="https://github.com/InajahaCosta">
+<div>
+    <div><a href="https://github.com/InajahaCosta">
     <p> Inajaha Costa Vilas Boas </p></a>
   </div>
-    <div class="item"><a href="https://github.com/pedroamota">
+    <div><a href="https://github.com/pedroamota">
     <p> Pedro Augusto da Luz Mota </p></a>
   </div>
-    <div class="item"><a href="https://github.com/lucerothayana">
+    <div><a href="https://github.com/lucerothayana">
     <p> Thayana Xavier Lucero </p></a>
   </div>
-    <div class="item"><a href="https://github.com/wilicarol">
+    <div><a href="https://github.com/wilicarol">
     <p> Wiliane Carolina Silva </p></a>
   </div>
 </div>
