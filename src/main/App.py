@@ -37,12 +37,23 @@ class App:
         calculate_button.pack(pady=10)
 
     def calcular_imc(self):
-        altura = float(self.altura_entry.get())
-        peso = float(self.peso_entry.get())
-        imc = self.calculadora_imc.calcular_imc(altura, peso)
-        result = self.imc_service.classificar_imc(imc)
 
-        self.result_label.config(text=f"{result.estado}.\n{result.comentario}")
+
+        try:
+            altura = float(self.altura_entry.get())
+            peso = float(self.peso_entry.get())
+            imc = self.calculadora_imc.calcular_imc(altura, peso)
+            result = self.imc_service.classificar_imc(imc)
+
+            self.result_label.config(text=f"{result.estado}.\n{result.comentario}")
+        except ValueError:
+            messagebox.showerror("Erro", "Por favor, insira valores válidos para peso e altura.")
+        except PesoNegativo as e:
+            messagebox.showerror("Erro", str(e))
+        except AlturaNegativa as e:
+            messagebox.showerror("Erro", str(e))
+        except Exception as e:
+            messagebox.showerror("Erro", "Um erro ocorreu durante o cálculo do IMC.")
 
 
 if __name__ == "__main__":
