@@ -1,39 +1,40 @@
 import tkinter as tk
 from tkinter import messagebox
 
-from src.main.ServiceIMC import ServiceIMC
-from src.main.CalculadoraIMC import CalculadoraIMC
+from src.main.CalculadoraIMC import AlturaNegativa, PesoNegativo, IMCService, Calculadora_IMC
 
-
-class AlturaNegativa(Exception):
-    pass
-
-class PesoNegativo(Exception):
-    pass
 
 class App:
     def __init__(self, root):
         self.root = root
         self.root.title("Calculadora de IMC")
+        self.root.geometry("400x300")
 
         # Instancia o serviço e a calculadora
-        self.imc_service = ServiceIMC()
-        self.calculadora_imc = CalculadoraIMC(self.imc_service)
+        self.imc_service = IMCService()
+        self.calculadora_imc = Calculadora_IMC(self.imc_service)
 
-        # Criação dos widgets
-        tk.Label(root, text="Altura (m):").pack()
-        self.altura_entry = tk.Entry(root)
-        self.altura_entry.pack()
+        # Criação dos frames para centralizar os widgets
+        altura_frame = tk.Frame(root)
+        altura_frame.pack(pady=(60, 10))
 
-        tk.Label(root, text="Peso (kg):").pack()
-        self.peso_entry = tk.Entry(root)
-        self.peso_entry.pack()
+        peso_frame = tk.Frame(root)
+        peso_frame.pack(pady=10)
+
+        # Criação dos widgets dentro dos frames
+        tk.Label(altura_frame, text="Altura (m):").pack(side="left")
+        self.altura_entry = tk.Entry(altura_frame)
+        self.altura_entry.pack(side="left")
+
+        tk.Label(peso_frame, text="Peso (kg):").pack(side="left")
+        self.peso_entry = tk.Entry(peso_frame)
+        self.peso_entry.pack(side="left")
 
         self.result_label = tk.Label(root, text="", pady=10)
         self.result_label.pack()
 
         calculate_button = tk.Button(root, text="Calcular IMC", command=self.calcular_imc)
-        calculate_button.pack()
+        calculate_button.pack(pady=10)
 
     def calcular_imc(self):
         try:
