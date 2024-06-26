@@ -8,7 +8,7 @@ class App:
     def __init__(self, root):
         self.root = root
         self.root.title("Calculadora de IMC")
-        self.root.geometry("400x300")
+        self.root.geometry("600x300")
 
         # Instancia o serviço e a calculadora
         self.imc_service = IMCService()
@@ -37,19 +37,13 @@ class App:
         calculate_button.pack(pady=10)
 
     def calcular_imc(self):
-        try:
-            altura = float(self.altura_entry.get())
-            peso = float(self.peso_entry.get())
-            resultado = self.calculadora_imc.obter_resultado_imc(altura, peso)
-            self.result_label.config(text=f"{resultado.mensagem} (IMC: {resultado.categoria})")
-        except ValueError:
-            messagebox.showerror("Erro", "Por favor, insira valores válidos para peso e altura.")
-        except PesoNegativo as e:
-            messagebox.showerror("Erro", str(e))
-        except AlturaNegativa as e:
-            messagebox.showerror("Erro", str(e))
-        except Exception as e:
-            messagebox.showerror("Erro", "Um erro ocorreu durante o cálculo do IMC.")
+        altura = float(self.altura_entry.get())
+        peso = float(self.peso_entry.get())
+        imc = self.calculadora_imc.calcular_imc(altura, peso)
+        result = self.imc_service.classificar_imc(imc)
+
+        self.result_label.config(text=f"{result.estado}.\n{result.comentario}")
+
 
 if __name__ == "__main__":
     root = tk.Tk()
